@@ -1,2 +1,2 @@
 image:
-  tag: "none" # CI overwrites on every push to main
+  tag: "c1da60b" # CI overwrites on every push to main
