@@ -1,0 +1,4 @@
+image:
+  repository: ghcr.io/ok2ju/hello-gitops-app
+  tag: "" # set per env in values-<env>.yaml, written by CI
+replicas: 1

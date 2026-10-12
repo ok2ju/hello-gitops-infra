@@ -1,0 +1,3 @@
+image:
+  tag: "none" # CI overwrites after prod approval
+replicas: 2

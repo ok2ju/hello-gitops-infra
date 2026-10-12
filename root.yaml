@@ -1,0 +1,20 @@
+# App-of-Apps root. Apply once by hand; after that every file in argocd/
+# becomes an Application on git push, and deleting a file removes it.
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: root
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/ok2ju/hello-gitops-infra.git
+    targetRevision: main
+    path: argocd
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

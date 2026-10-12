@@ -1,0 +1,2 @@
+image:
+  tag: "none" # CI overwrites on every push to main
